@@ -1,0 +1,16 @@
+# Ignore Python virtual environment
+advancePython/venv/
+
+# Ignore compiled Python files and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore temporary files
+*.swp
+*.swo
+*.tmp
+
+# Ignore editor metadata
+.vscode/
