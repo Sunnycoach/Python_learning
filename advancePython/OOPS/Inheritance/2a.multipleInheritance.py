@@ -22,13 +22,26 @@ class Employee(Company):
         else:
             self.companyName = companyName
     
-    def employeeInfo(self):
-
+    def info(self):
         company = Company.info(self)
-
         print(f"{self.name} is working in {company}")
 
+class Contractor(Company):
 
-obj = Employee("Sunny")
+    def __init__(self, name, companyName=None):
+        self.name = name
+        if companyName is None:
+            self.companyName = Company.companyName
+        else:
+            self.companyName = companyName
+    
+    def info(self):
+        company = Company.info(self)
+        print(f"{self.name} is working in {company} as a contractor")
 
-obj.employeeInfo()
+
+# obj = Employee("Sunny")
+# obj.info()
+
+contractor_obj = Contractor("John")
+contractor_obj.info()
